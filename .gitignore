@@ -1,0 +1,17 @@
+# Ignorer les dossiers de l'environnement virtuel et les fichiers cache
+__pycache__/
+env/
+venv/
+
+# Ignorer les modèles téléchargés (prend trop de place)
+models/
+
+# Ignorer les images générées (si tu ne veux pas les uploader)
+outputs/
+
+# Ignorer les fichiers temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers de configuration utilisateur (si existant)
+config.json
