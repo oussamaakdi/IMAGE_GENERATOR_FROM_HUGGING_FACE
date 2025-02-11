@@ -1,105 +1,109 @@
-### 📄 **`README.md`**
+### 📄 **README.md**
 ```markdown
 # 🎨 Stable Diffusion Image Generator
-**Un générateur d'images basé sur Stable Diffusion, utilisant un modèle téléchargé en local.**  
-⚡ Fonctionne en CPU ou GPU | 🖼️ Génère des images à partir de texte | 🌍 Interface Gradio interactive  
+Générateur d'images basé sur **Stable Diffusion**, utilisant un modèle local.  
+🚀 Fonctionne en CPU ou GPU | 🖼️ Interface Gradio  
 
 ---
 
 ## 📌 Fonctionnalités
-✅ Génère des images à partir d'un **prompt textuel**  
-✅ **Interface web** avec Gradio  
-✅ **Facile à utiliser et à déployer**  
+- 📝 Génère des images à partir d'un **prompt**  
+- 🌍 Interface web **Gradio**  
+- ⚡ Facile à installer et utiliser  
 
 ---
 
 ## 📂 Structure du Projet
 ```
 IMAGE_GENERATOR_FROM_HUGGING_FACE/
-│── env/                  # Environnement virtuel (Crée le vôtre)
-│── models/               # Modèles téléchargés (initialement vide)
+│── env/                  # Environnement virtuel (à créer)
+│── models/               # Modèle téléchargé (sauvegardé ici)
 │── outputs/              # Images générées
-│── app.py                # Interface web avec Gradio
-│── generate.py           # Génération d'images avec le modèle
-│── config.py             # Fichier de configuration (n'hésite pas à le modifier selon vos besoins)
-│── requirements.txt      # Dépendances du projet
+│── app.py                # Interface web
+│── generate.py           # Génération d'images
+│── config.py             # Configuration
+│── requirements.txt      # Dépendances
 │── README.md             # Documentation
 ```
 
 ---
 
-## 🚀 Installation et Lancement
+## 🚀 Installation et Utilisation
 
-### 1️⃣ **Cloner le projet**
+### **1️⃣ Cloner le projet**
 ```bash
 git clone https://github.com/tonpseudo/IMAGE_GENERATOR_FROM_HUGGING_FACE.git
 cd IMAGE_GENERATOR_FROM_HUGGING_FACE
 ```
 
-### 2️⃣ **Créer un environnement virtuel**
+### **2️⃣ Créer un environnement virtuel**
 ```bash
 python -m venv env
-source env/bin/activate      # Sur macOS/Linux
-env\Scripts\activate         # Sur Windows
+source env/bin/activate      # macOS/Linux
+env\Scripts\activate         # Windows
 ```
 
-### 3️⃣ **Installer les dépendances**
+### **3️⃣ Installer les dépendances**
 ```bash
 pip install -r requirements.txt
 ```
 
-### **4️⃣ Téléchargement et sauvegarde du modèle**
-Exécute `generate.py` une première fois pour télécharger et sauvegarder le modèle :
+### **4️⃣ Télécharger et sauvegarder le modèle**
+Exécute `generate.py` pour télécharger le modèle :
 ```bash
 python generate.py
 ```
-Cela va :
-✅ **Télécharger Stable Diffusion** depuis Hugging Face  
-✅ **Générer une première image pour tester**  
-✅ **Sauvegarder le modèle localement dans `models/stable-diffusion-cpu`**  
+✅ **Télécharge le modèle**  
+✅ **Génère une image test**  
+✅ **Sauvegarde dans `models/stable-diffusion-cpu`**  
 
 ---
 
-### **5️⃣ Modifier `generate.py` pour réutiliser le modèle sauvegardé**
+### **5️⃣ Modifier `generate.py` pour éviter le téléchargement à chaque fois**
 Après la première exécution, modifie `generate.py` et **commente la ligne suivante** :
 ```python
 # pipeline = StableDiffusionPipeline.from_pretrained(MODEL_NAME)
 pipeline = StableDiffusionPipeline.from_pretrained("models/stable-diffusion-cpu")
 ```
-Cela **permet de réutiliser le modèle sans le télécharger à chaque fois**.
 
 ---
 
 ### **6️⃣ Lancer l'application**
-Une fois le modèle téléchargé et sauvegardé, lance l'interface Gradio :
 ```bash
-python src/app.py
+python app.py
 ```
 📌 **Accéder à l'interface** : [http://127.0.0.1:7860](http://127.0.0.1:7860)  
+
 ---
 
-## 🛠️ Configuration (`config.py`)
+## ⚙️ Configuration (`config.py`)
 ```python
-MODEL_NAME = "runwayml/stable-diffusion-v1-5"  # Modèle utilisé
-DEVICE = "cpu"  # Exécuter en CPU ou GPU
+MODEL_NAME = "runwayml/stable-diffusion-v1-5"
+DEVICE = "cpu"
 IMG_HEIGHT = 512
 IMG_WIDTH = 512
-NUM_INFERENCE_STEPS = 25  # Nombre d'itérations pour la génération
+NUM_INFERENCE_STEPS = 25
 OUTPUT_DIR = "outputs/"
 ```
 
-
 ---
 
-## 🛠️ Dépendances techniques
-- [Stable Diffusion (`diffusers`)](https://huggingface.co/docs/diffusers/index)
-- [Gradio (interface utilisateur)](https://gradio.app)
-- [PyTorch](https://pytorch.org/)
+## 🛠️ Dépendances
+- **[`diffusers`](https://huggingface.co/docs/diffusers/index)**
+- **[`Gradio`](https://gradio.app)**
+- **[`PyTorch`](https://pytorch.org/)**
 
 ---
-
 
 ## 📜 Licence
-Ce projet est sous licence **MIT**. Libre d’utilisation et de modification. 🚀  
-
+Projet sous licence **MIT**. Libre d’utilisation et modification. 🚀  
 ```
+
+---
+
+### **🎯 Changements par rapport à la version précédente**
+✅ Markdown **plus simple et épuré**  
+✅ Moins de **gras et emojis**, juste ce qu'il faut  
+✅ **Instructions claires et concises**  
+
+**📌 Dis-moi si c'est bon ou si tu veux encore plus simple !** 🚀
