@@ -1,5 +1,3 @@
-### 📄 **README.md**
-```markdown
 # 🎨 Stable Diffusion Image Generator
 Générateur d'images basé sur **Stable Diffusion**, utilisant un modèle local.  
 🚀 Fonctionne en CPU ou GPU | 🖼️ Interface Gradio  
@@ -9,20 +7,20 @@ Générateur d'images basé sur **Stable Diffusion**, utilisant un modèle local
 ## 📌 Fonctionnalités
 - 📝 Génère des images à partir d'un **prompt**  
 - 🌍 Interface web **Gradio**  
-- ⚡ Facile à installer et utiliser  
+- ⚡ Facile à utiliser  
 
 ---
 
 ## 📂 Structure du Projet
 ```
-IMAGE_GENERATOR_FROM_HUGGING_FACE/
-│── env/                  # Environnement virtuel (à créer)
-│── models/               # Modèle téléchargé (sauvegardé ici)
-│── outputs/              # Images générées
-│── app.py                # Interface web
-│── generate.py           # Génération d'images
-│── config.py             # Configuration
-│── requirements.txt      # Dépendances
+IMAGE_GENERATOR_FROM_HUGGING_FACE/ 
+│── env/                  # Environnement virtuel (à créer) 
+│── models/               # Modèle téléchargé (sauvegardé ici) 
+│── outputs/              # Images générées 
+│── app.py                # Interface web 
+│── generate.py           # Génération d'images 
+│── config.py             # Configuration 
+│── requirements.txt      # Dépendances 
 │── README.md             # Documentation
 ```
 
@@ -32,7 +30,7 @@ IMAGE_GENERATOR_FROM_HUGGING_FACE/
 
 ### **1️⃣ Cloner le projet**
 ```bash
-git clone https://github.com/tonpseudo/IMAGE_GENERATOR_FROM_HUGGING_FACE.git
+git clone https://github.com/oussamaakdi/IMAGE_GENERATOR_FROM_HUGGING_FACE.git
 cd IMAGE_GENERATOR_FROM_HUGGING_FACE
 ```
 
@@ -53,9 +51,9 @@ Exécute `generate.py` pour télécharger le modèle :
 ```bash
 python generate.py
 ```
-✅ **Télécharge le modèle**  
-✅ **Génère une image test**  
-✅ **Sauvegarde dans `models/stable-diffusion-cpu`**  
+✅ Télécharge le modèle  
+✅ Génère une image test  
+✅ Sauvegarde dans `models/stable-diffusion-cpu`  
 
 ---
 
@@ -89,21 +87,11 @@ OUTPUT_DIR = "outputs/"
 ---
 
 ## 🛠️ Dépendances
-- **[`diffusers`](https://huggingface.co/docs/diffusers/index)**
-- **[`Gradio`](https://gradio.app)**
-- **[`PyTorch`](https://pytorch.org/)**
+- `diffusers`
+- `Gradio`
+- `PyTorch`
 
 ---
 
 ## 📜 Licence
-Projet sous licence **MIT**. Libre d’utilisation et modification. 🚀  
-```
-
----
-
-### **🎯 Changements par rapport à la version précédente**
-✅ Markdown **plus simple et épuré**  
-✅ Moins de **gras et emojis**, juste ce qu'il faut  
-✅ **Instructions claires et concises**  
-
-**📌 Dis-moi si c'est bon ou si tu veux encore plus simple !** 🚀
+Projet sous licence **MIT**. Libre d’utilisation et modification. 🚀
